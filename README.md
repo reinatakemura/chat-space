@@ -27,9 +27,9 @@ Things you may want to cover:
 ## users_table
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: false|
+|email|string|null: false, unique: true|
 |password|string|null: false|
-|username|string|null: false|
+|username|string|null: false, index: true|
 ### Association
 - has_many :messages
 - has_many :users_groups
@@ -45,8 +45,8 @@ Things you may want to cover:
 ## groups_users_table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -55,8 +55,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |message|text|null: false|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -65,8 +65,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
