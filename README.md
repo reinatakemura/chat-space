@@ -13,11 +13,14 @@
 ## groups_table
 |Column|Type|Options|
 |------|----|-------|
-|group|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :messages
+- has_many :users_groups
+- has_many :users, through: :users_groups
 
-## groups_users_table
+
+## users_groups_table
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -30,15 +33,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |message|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :group
-
-## images_table
-|Column|Type|Options|
-|------|----|-------|
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
