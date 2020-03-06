@@ -1,0 +1,39 @@
+.main-chat
+  .main-chat__group-info
+    .main-chat__group-info-leftbox
+      .main-chat__group-info-leftbox-chat
+        test
+      .main-chat__group-info-leftbox-member
+        Member：
+        .main-chat__group-info-leftbox-member-name
+          reina
+    .main-chat__group-info-rightbox
+      = link_to "#", class: "main-chat__group-info-rightbox-btn" do
+        .main-chat__group-info-rightbox-btn-edit
+          Edit
+  .main-chat__contents
+    .main-chat__contents-body
+      .main-chat__contents-body-title
+        .main-chat__contents-body-title-name
+          reina　
+        .main-chat__contents-body-title-time
+          2020/03/06(Fri) 21:11:59
+      .main-chat__contents-body-message
+        こんばんは！
+      .main-chat__contents-body-title
+        .main-chat__contents-body-title-name
+          ayaka　
+        .main-chat__contents-body-title-time
+          2020/03/07(Sat) 21:11:59
+      .main-chat__contents-body-message
+        こんばんは！
+  .main-chat__message
+    .main-chat__message--form
+      .main-chat__message--form--type
+        type a message
+      .main-chat__message--form--image
+        %label{class: 'main-chat__message--form--image-icon'}
+          = icon('fa', 'image')
+          %input{type: 'file', class: "main-chat__message--form--image-icon-input-default"}
+    = link_to "#", class: "main-chat__message--btn" do
+      Send
