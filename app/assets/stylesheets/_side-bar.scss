@@ -33,16 +33,17 @@
   &__groups {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    color: #fff;
     font-weight: bold;
     &-list {
       &-name {
         padding: 20px 20px 5px 20px;
         font-size: 15px;
+        color: #fff;
       }
       &-new-message {
         padding: 0 20px 40px 20px;
         font-size: 11px;
+        color: #fff;
       }
     }
   }
