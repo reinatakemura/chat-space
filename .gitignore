@@ -17,3 +17,6 @@
 .byebug_history
 
 public/uploads/*
+
+# 今の段階でアップロードしても問題はありませんが、secrets.ymlは各種パスワードを扱うためのファイル
+config/secrets.yml

@@ -73,3 +73,6 @@ gem 'pry-rails'
 # Image Uploader
 gem 'carrierwave'
 gem 'mini_magick'
+
+#画像をアップロードする際、外部のストレージを選択しアップロードするのを補助
+gem 'fog-aws'
