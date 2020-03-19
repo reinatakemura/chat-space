@@ -11,7 +11,7 @@
   .side-bar__groups
     - current_user.groups.each do |group|
       .side-bar__groups-list
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group) , class:'side-bar__groups-list' do
           .side-bar__groups-list-name
             = group.name
           .side-bar__groups-list-new-message
