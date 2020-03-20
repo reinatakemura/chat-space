@@ -30,11 +30,16 @@ $(function() {
       $(`#${userId}`).append(html);
   }
   $("#user-search-field").on("keyup", function() {
+    let index = $('.user-search-remove').length;
+    let user_id = [];
+    for(let i=0; i<index; i++){
+      user_id.push($('.user-search-remove').eq(i).data('user-id'));
+    };
     let input = $("#user-search-field").val();
     $.ajax({
       type: "GET",
       url: "/users",
-      data: { keyword: input },
+      data: { keyword: input, user_id: user_id },
       dataType: "json"
     })
     .done(function(users) {
@@ -55,7 +60,6 @@ $(function() {
     });
   });
   $(document).on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
